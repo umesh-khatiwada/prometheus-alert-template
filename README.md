@@ -95,18 +95,8 @@ There are many ways to contribute: writing code, alerting rules, documentation, 
 - Create an alert rule builder in Jekyll for custom alerts (severity, thresholds, instances...)
 - Add resolution suggestions to rule descriptions, for faster incident resolution ([#85](https://github.com/samber/awesome-prometheus-alerts/issues/85)).
 
-## 💫 Show your support
-
-Give a ⭐️ if this project helped you!
-
-[![support us](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/samber)
-
 ## 👏 Thanks
 
 Gratitude for the Gitlab operation team that provided 50+ rules. \o/
 
-## 📝 License
 
-[![CC4](https://mirrors.creativecommons.org/presskit/cc.srr.primary.svg)](https://creativecommons.org/licenses/by/4.0/legalcode)
-
-Licensed under the Creative Commons 4.0 License, see LICENSE file for more detail.
