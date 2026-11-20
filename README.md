@@ -1,5 +1,38 @@
 # 👋 Awesome Prometheus Alerts [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
+> **Provenance:** this repository is a copy of [samber/awesome-prometheus-alerts](https://github.com/samber/awesome-prometheus-alerts) (rules, Jekyll site, `LICENSE`), kept as a template for Prometheus alerting rules. All rules and site content are the work of the upstream authors and contributors and are licensed CC BY 4.0 (see [License](#-license)). `_config.yml` still points at the upstream repository. TODO: document any local modifications; the history contains a single commit so none can be identified.
+
+## Prerequisites
+
+- Docker and Docker Compose (to preview the Jekyll site), or Ruby with Bundler (`Gemfile`)
+- Node.js (only for `npm test`, which runs `awesome-lint`)
+- A Prometheus and Alertmanager setup to load the rules into
+
+## Quick start
+
+Alerting rules are authored in `_data/rules.yml`; generated, ready-to-use Prometheus rule files are under `dist/rules/<technology>/<exporter>.yml`, and `dist/rules/email_template.tmpl` is an Alertmanager email template. Copy the rule files you need into your Prometheus `rule_files` location.
+
+Preview the site locally (serves on `http://localhost:4000`):
+
+```bash
+docker-compose up
+# or
+bundle install && jekyll serve
+```
+
+## Repository structure
+
+```
+.
+├── _data/rules.yml        # source of all rules
+├── _layouts/ assets/      # Jekyll theme and static files
+├── index.md rules.md alertmanager.md blackbox-exporter.md sleep-peacefully.md   # site pages
+├── dist/rules/            # generated rule files per exporter
+├── dist/template.yml      # Liquid template used to render rule files
+├── CONTRIBUTING.md        # how to add or improve rules
+└── LICENSE                # CC BY 4.0
+```
+
 > Most alerting rules are common to every Prometheus setup. We need a place to find them all. 🤘 🚨 📊
 
 Collection available here: **[https://samber.github.io/awesome-prometheus-alerts](https://samber.github.io/awesome-prometheus-alerts)**
@@ -99,4 +132,10 @@ There are many ways to contribute: writing code, alerting rules, documentation, 
 
 Gratitude for the Gitlab operation team that provided 50+ rules. \o/
 
+## 📜 License
 
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](LICENSE), (c) the awesome-prometheus-alerts authors. Original work: https://github.com/samber/awesome-prometheus-alerts
+
+## Author
+
+Template repository maintained by Umesh Khatiwada - https://github.com/umesh-khatiwada
